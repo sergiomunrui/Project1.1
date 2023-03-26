@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnMenuRegistrar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="80dp"
+        android:onClick="Registrar"
+        android:text="@string/btnMenuRegistrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloColegio" />
+
+    <Button
+        android:id="@+id/btnMenuConsultar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/btnMenuConsultar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenuRegistrar" />
+
+    <Button
+        android:id="@+id/btnMenuModificar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/btnMenuModificar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenuConsultar" />
+
+    <Button
+        android:id="@+id/btnMenuEliminar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/btnMenuEliminar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenuModificar" />
+
+    <TextView
+        android:id="@+id/tvTituloColegio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/tvTituloColegio"
+        android:textColor="#000000"
+        android:textSize="34dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

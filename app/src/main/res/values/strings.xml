@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Project1.1</string>
+    <string name="btnMenuRegistrar">Registrar</string>
+    <string name="btnMenuConsultar">Consultar</string>
+    <string name="btnMenuModificar">Modificar</string>
+    <string name="btnMenuEliminar">Eliminar</string>
+    <string name="tvTituloColegio">Colegio San Rafael</string>
+    <string name="btnMenu">Menú</string>
+    <string name="etRegistrarNombre">Nombre</string>
+    <string name="etRegistrarApellidos">Apellidos</string>
+    <string name="etRegistrarTeléfono">Teléfono</string>
+    <string name="etRegistrarCorreo">Correo</string>
+    <string name="btRegistrarAlumno">Registrar alumno</string>
+    <string name="etRegistrarNotas">Registrar notas</string>
+    <string name="spCurso">Curso</string>
+    <string-array name="spinner_items">
+        <item>Curso</item> <!-- Este elemento será el "hint", no seleccionable -->
+        <item>1A</item>
+        <item>1B</item>
+        <item>1C</item>
+        <item>2A</item>
+        <item>2B</item>
+        <item>2C</item>
+        <item>3A</item>
+        <item>3B</item>
+        <item>3C</item>
+        <item>4A</item>
+        <item>4B</item>
+        <item>4C</item>
+    </string-array>
+</resources>
