@@ -10,8 +10,9 @@
     <string name="etRegistrarApellidos">Apellidos</string>
     <string name="etRegistrarTeléfono">Teléfono</string>
     <string name="etRegistrarCorreo">Correo</string>
-    <string name="btRegistrarAlumno">Registrar alumno</string>
-    <string name="etRegistrarNotas">Registrar notas</string>
+    <string name="etRegistrarID">ID</string>
+    <string name="btnRegistrarAlumno">Registrar alumno</string>
+    <string name="btnRegistrarNotas">Registrar notas</string>
     <string name="spCurso">Curso</string>
     <string-array name="spinner_items">
         <item>Curso</item> <!-- Este elemento será el "hint", no seleccionable -->
@@ -28,4 +29,22 @@
         <item>4B</item>
         <item>4C</item>
     </string-array>
+    <string name="etNota">Nota</string>
+    <string name="btnRegistrarNota">Registrar nota</string>
+    <string name="btnAtras">Atrás</string>
+    <string-array name="spinner_items_tri">
+        <item>Trimestre</item> <!-- Este elemento será el "hint", no seleccionable -->
+        <item>Primer trimestre</item>
+        <item>Segundo trimestre</item>
+        <item>Tercer trimestre</item>
+    </string-array>
+    <string-array name="spinner_items_asig">
+        <item>Asignatura</item> <!-- Este elemento será el "hint", no seleccionable -->
+        <item>Matemáticas</item>
+        <item>Lengua</item>
+        <item>Biología</item>
+        <item>Inglés</item>
+        <item>Educación Física</item>
+    </string-array>
+
 </resources>

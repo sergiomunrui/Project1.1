@@ -3,6 +3,6 @@
     android:id="@+id/spinner_item_text"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textSize="16sp"
-    android:padding="12dp"
+    android:textSize="20sp"
+    android:padding="18sp"
     android:textColor="@android:color/black"/>
