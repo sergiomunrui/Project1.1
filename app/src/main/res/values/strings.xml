@@ -46,5 +46,7 @@
         <item>Inglés</item>
         <item>Educación Física</item>
     </string-array>
+    <string name="tvEliminarID">Introduzca el ID del alumno:</string>
+    <string name="btnEliminar">Eliminar</string>
 
 </resources>

@@ -18,4 +18,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, RegistrarActivity.class);
         startActivity(i);
     }
+
+    //Método para pasar a EliminarActivity
+    public void Eliminar(View view){
+        Intent i = new Intent(this, EliminarActivity.class);
+        startActivity(i);
+    }
 }
