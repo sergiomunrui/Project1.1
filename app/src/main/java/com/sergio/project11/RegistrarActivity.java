@@ -1,5 +1,6 @@
 package com.sergio.project11;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -47,9 +48,28 @@ public class RegistrarActivity extends AppCompatActivity {
             DatabaseHelper dbHelper = new DatabaseHelper(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-            // Aquí necesitarías realizar la consulta SQL adecuada según tu diseño de base de datos
-            String query = "INSERT INTO alumno (nombre_al, apellidos_al, telefono_al, correo_al, grupo) VALUES (?, ?, ?, ?, ?)";
-            db.execSQL(query, new Object[]{nombre, apellidos, telefono, correo, grupo});
+            // Inserta al alumno
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("nombre_al", nombre);
+            contentValues.put("apellidos_al", apellidos);
+            contentValues.put("telefono_al", telefono);
+            contentValues.put("correo_al", correo);
+            contentValues.put("grupo", grupo);
+            long newRowId = db.insert("alumno", null, contentValues);
+
+            // Si el alumno se insertó correctamente
+            if (newRowId != -1) {
+                // Registra las notas con valor 0 para cada asignatura y trimestre
+                for (int asignatura = 1; asignatura <= 5; asignatura++) {
+                    for (int trimestre = 1; trimestre <= 3; trimestre++) {
+                        String query = "INSERT INTO nota (alumno_id, asignatura_id, trimestre, nota) VALUES (?, ?, ?, ?)";
+                        db.execSQL(query, new Object[]{newRowId, asignatura, trimestre, null});
+                    }
+                }
+                Toast.makeText(this, "Alumno registrado correctamente", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Error al registrar el alumno", Toast.LENGTH_SHORT).show();
+            }
 
             db.close();
             limpiar();

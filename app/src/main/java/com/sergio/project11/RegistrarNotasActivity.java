@@ -1,6 +1,7 @@
 package com.sergio.project11;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,7 +52,6 @@ public class RegistrarNotasActivity extends AppCompatActivity {
         String asignaturaSpinner = spAsignatura.getSelectedItem().toString();
         String trimestreSpinner = spTrimestre.getSelectedItem().toString();
 
-
         //Pasamos de cadena de texto a int y double respectivamente
         idAlumno=Integer.parseInt(campoId);
         nota=Double.parseDouble(campoNota);
@@ -82,15 +82,25 @@ public class RegistrarNotasActivity extends AppCompatActivity {
             DatabaseHelper dbHelper = new DatabaseHelper(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-            // Aquí necesitarías realizar la consulta SQL adecuada según tu diseño de base de datos
-            String query = "INSERT INTO nota (alumno_id, asignatura_id, trimestre, nota) VALUES (?, ?, ?, ?)";
-            db.execSQL(query, new Object[]{idAlumno, asignaturaSeleccionada, trimestreSeleccionado, nota});
+            // Consulta para verificar si ya existe una nota para el alumno, asignatura y trimestre seleccionados
+            String checkQuery = "SELECT * FROM nota WHERE alumno_id = ? AND asignatura_id = ? AND trimestre = ?";
+            Cursor cursor = db.rawQuery(checkQuery, new String[]{String.valueOf(idAlumno), String.valueOf(asignaturaSeleccionada), String.valueOf(trimestreSeleccionado)});
 
-            db.close();
+            if (cursor.moveToFirst()) {
+                // Si hay resultado, muestra el mensaje de error
+                Toast.makeText(this, "Error: nota para el alumno registrada anteriormente", Toast.LENGTH_LONG).show();
+            } else {
+                // Aquí realizamos la consulta SQL para insertar registro en la tabla nota
+                String query = "INSERT INTO nota (alumno_id, asignatura_id, trimestre, nota) VALUES (?, ?, ?, ?)";
+                db.execSQL(query, new Object[]{idAlumno, asignaturaSeleccionada, trimestreSeleccionado, nota});
+                Toast.makeText(this, "Nota registrada correctamente", Toast.LENGTH_SHORT).show();
 
-            Toast.makeText(this, "Nota registrada correctamente", Toast.LENGTH_SHORT).show();
+                cursor.close();
+                db.close();
+            }
+
         } else {
-            Toast.makeText(this, "Por favor, rellena todos los campos de forma correcta", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Por favor, rellena todos los campos de forma correcta", Toast.LENGTH_LONG).show();
         }
 
     }
