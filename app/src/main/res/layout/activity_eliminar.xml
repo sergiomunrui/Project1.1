@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="center"
     tools:context=".EliminarActivity">
 
     <EditText
@@ -22,8 +23,8 @@
         android:id="@+id/btnEliminar"
         android:layout_width="222dp"
         android:layout_height="48dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="204dp"
         android:onClick="eliminarAlumno"
         android:text="@string/btnEliminar"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,4 +51,5 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

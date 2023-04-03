@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class EliminarActivity extends AppCompatActivity {
@@ -32,13 +33,16 @@ public class EliminarActivity extends AppCompatActivity {
             SQLiteDatabase db = dbHelper.getWritableDatabase();
 
             // Verificar si el alumno existe en la base de datos
-            String consultaAlumno = "SELECT * FROM alumno WHERE id_al = ?";
+            String consultaAlumno = "SELECT nombre_al, apellidos_al FROM alumno WHERE id_al = ?";
             Cursor cursor = db.rawQuery(consultaAlumno, new String[]{idAlumno});
 
+            // Actualizar el valor del TextView con el nombre del alumno si se encuentra en la base de datos
             if (cursor.moveToFirst()) {
+                String nombreAlumno = cursor.getString(0);
+                String apellidosAlumno = cursor.getString(1);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Confirmar eliminación");
-                builder.setMessage("¿Estás seguro de que deseas eliminar el registro del alumno y sus notas?");
+                builder.setMessage("¿Estás seguro de eliminar al alumno " + nombreAlumno + " "+ apellidosAlumno + " y sus notas?");
 
                 builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     @Override
