@@ -52,9 +52,20 @@ public class RegistrarNotasActivity extends AppCompatActivity {
         String asignaturaSpinner = spAsignatura.getSelectedItem().toString();
         String trimestreSpinner = spTrimestre.getSelectedItem().toString();
 
-        //Pasamos de cadena de texto a int y double respectivamente
-        idAlumno=Integer.parseInt(campoId);
-        nota=Double.parseDouble(campoNota);
+        //Pasamos de cadena de texto a int y double respectivamente con captura de error de formato de número
+        try{
+            idAlumno=Integer.parseInt(campoId);
+        }catch(NumberFormatException e){
+            System.out.println("El ID no es un número válido.");
+            e.toString();
+        }
+
+        try{
+            nota=Double.parseDouble(campoNota);
+        }catch(NumberFormatException e){
+            System.out.println("La nota no es un número válido.");
+            e.toString();
+        }
 
         //Pasamos de cadena de texto lo seleccionado a int
         if(trimestreSpinner.equals("Primer trimestre")){
