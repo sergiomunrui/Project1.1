@@ -95,10 +95,5 @@ public class RegistrarActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    //Método para pasar a RegistrarActivity
-    public void Menu(View view){
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
-    }
 
 }

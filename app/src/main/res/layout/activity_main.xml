@@ -23,6 +23,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="104dp"
         android:layout_marginTop="50dp"
+        android:onClick="Consultar"
         android:text="@string/btnMenuConsultar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMenuRegistrar" />

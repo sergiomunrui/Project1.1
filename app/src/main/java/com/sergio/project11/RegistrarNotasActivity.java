@@ -122,10 +122,5 @@ public class RegistrarNotasActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    //Método para pasar a RegistrarActivity
-    public void Atrás(View view){
-        Intent i = new Intent(this, RegistrarActivity.class);
-        startActivity(i);
-    }
 
 }

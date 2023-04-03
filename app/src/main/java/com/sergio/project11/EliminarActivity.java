@@ -78,10 +78,5 @@ public class EliminarActivity extends AppCompatActivity {
         }
     }
 
-    //Método para pasar a MainActivity
-    public void Menu(View view){
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
-    }
 
 }

@@ -24,4 +24,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, EliminarActivity.class);
         startActivity(i);
     }
+
+    //Método para pasar a ConsultarActivity
+    public void Consultar(View view){
+        Intent i = new Intent(this, ConsultarActivity.class);
+        startActivity(i);
+    }
 }

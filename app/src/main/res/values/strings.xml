@@ -48,5 +48,12 @@
     </string-array>
     <string name="tvEliminarID">Introduzca el ID del alumno:</string>
     <string name="btnEliminar">Eliminar</string>
+    <string name="tvConsultar">Consultar</string>
+    <string name="btnConsultarAlumno">Consultar alumno</string>
+    <string name="btnConsultarCurso">Consultar curso</string>
+    <string name="tvTelefono">Teléfono: </string>
+    <string name="tvCorreo">Correo: </string>
+    <string name="tvCurso">Curso: </string>
+    <string name="tvNotas">Notas: </string>
 
 </resources>

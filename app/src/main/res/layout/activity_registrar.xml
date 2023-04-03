@@ -79,21 +79,11 @@
         android:id="@+id/btnRegistrarNotas"
         android:layout_width="103dp"
         android:layout_height="70dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="40dp"
         android:onClick="PasarRegistrarNotas"
         android:text="@string/btnRegistrarNotas"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
 
-    <Button
-        android:id="@+id/btnMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="288dp"
-        android:layout_marginBottom="24dp"
-        android:onClick="Menu"
-        android:text="@string/btnMenu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatosAlumnoActivity">
+
+    <ImageView
+        android:id="@+id/btnConsultarAlumnoMenu"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="36dp"
+        android:onClick="Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/home_icon" />
+
+    <EditText
+        android:id="@+id/etConsultarID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/etRegistrarID"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etConsultarNombre"
+        android:layout_width="335dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/etRegistrarNombre"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConsultarID" />
+
+    <EditText
+        android:id="@+id/etConsultarApellidos"
+        android:layout_width="335dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/etRegistrarApellidos"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConsultarNombre" />
+
+    <Button
+        android:id="@+id/btnConsultarDatos"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="20dp"
+        android:onClick="ConsultarDatos"
+        android:text="@string/tvConsultar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConsultarApellidos" />
+
+    <TextView
+        android:id="@+id/tvConsultarTelefono"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/tvTelefono"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvConsultarGrupo" />
+
+    <TextView
+        android:id="@+id/tvConsultarCorreo"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/tvCorreo"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvConsultarTelefono" />
+
+    <TextView
+        android:id="@+id/tvConsultarGrupo"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="42dp"
+        android:text="@string/tvCurso"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultarDatos" />
+
+    <TextView
+        android:id="@+id/tvNotas"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="128dp"
+        android:text="@string/tvNotas"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultarDatos" />
+
+    <ImageView
+        android:id="@+id/btnDatosNotas"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="52dp"
+        android:onClick="DatosNotas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultarDatos"
+        app:srcCompat="@mipmap/mark_icon" />
+
+</android.support.constraint.ConstraintLayout>
