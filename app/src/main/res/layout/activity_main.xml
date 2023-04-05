@@ -4,60 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1DB7AE"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/btnMenuRegistrar"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="80dp"
-        android:onClick="Registrar"
-        android:text="@string/btnMenuRegistrar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTituloColegio" />
-
-    <Button
-        android:id="@+id/btnMenuConsultar"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="50dp"
-        android:onClick="Consultar"
-        android:text="@string/btnMenuConsultar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMenuRegistrar" />
-
-    <Button
-        android:id="@+id/btnMenuModificar"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/btnMenuModificar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMenuConsultar" />
-
-    <Button
-        android:id="@+id/btnMenuEliminar"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="48dp"
-        android:onClick="Eliminar"
-        android:text="@string/btnMenuEliminar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMenuModificar" />
 
     <TextView
         android:id="@+id/tvTituloColegio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="176dp"
         android:text="@string/tvTituloColegio"
-        android:textColor="#000000"
-        android:textSize="34dp"
+        android:textColor="#FEDD06"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="133dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/loro_logo" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="360dp"
+        android:layout_height="460dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889">
+
+        <Button
+            android:id="@+id/btnMenuRegistrar"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:onClick="Registrar"
+            android:text="@string/btnMenuRegistrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnMenuConsultar"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="56dp"
+            android:onClick="Consultar"
+            android:text="@string/btnMenuConsultar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMenuRegistrar" />
+
+        <Button
+            android:id="@+id/btnMenuModificar"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="52dp"
+            android:text="@string/btnMenuModificar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMenuConsultar" />
+
+        <Button
+            android:id="@+id/btnMenuEliminar"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="52dp"
+            android:onClick="Eliminar"
+            android:text="@string/btnMenuEliminar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMenuModificar" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="350dp"
+            android:layout_height="450dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bottom_background_light_green" />
+    </android.support.constraint.ConstraintLayout>
+
+
 </android.support.constraint.ConstraintLayout>
+

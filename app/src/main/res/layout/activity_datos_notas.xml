@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="center"
     tools:context=".DatosNotasActivity">
 
     <TextView
         android:id="@+id/tvIdAlumno"
-        android:layout_width="150dp"
+        android:layout_width="60dp"
         android:layout_height="40dp"
-        android:layout_marginStart="128dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="52dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,8 +23,45 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="70dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
+
+    <TextView
+        android:id="@+id/tvMatT"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/tvCabecera1"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
+
+    <TextView
+        android:id="@+id/tvMatT4"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/tvCabecera2"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvMatT"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
+
+    <TextView
+        android:id="@+id/tvMatT5"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/tvCabecera3"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvMatT4"
         app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
 
     <TextView
@@ -33,6 +71,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="70dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvMatT1"
         app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
@@ -44,6 +83,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="70dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvMatT2"
         app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
@@ -55,6 +95,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/tvMatT1" />
@@ -66,6 +107,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvLengT1"
         app:layout_constraintTop_toBottomOf="@+id/tvMatT2" />
@@ -77,6 +119,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvLengT2"
         app:layout_constraintTop_toBottomOf="@+id/tvMatT3" />
@@ -88,6 +131,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/tvLengT1" />
@@ -99,6 +143,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvBioT1"
         app:layout_constraintTop_toBottomOf="@+id/tvLengT2" />
@@ -110,6 +155,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvBioT2"
         app:layout_constraintTop_toBottomOf="@+id/tvLengT3" />
@@ -121,6 +167,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/tvBioT1" />
@@ -132,6 +179,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvIngT1"
         app:layout_constraintTop_toBottomOf="@+id/tvBioT2" />
@@ -143,6 +191,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvIngT2"
         app:layout_constraintTop_toBottomOf="@+id/tvBioT3" />
@@ -154,6 +203,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/textView17"
         app:layout_constraintTop_toBottomOf="@+id/tvIngT1" />
@@ -165,6 +215,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvEfT1"
         app:layout_constraintTop_toBottomOf="@+id/tvIngT2" />
@@ -176,6 +227,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvEfT2"
         app:layout_constraintTop_toBottomOf="@+id/tvIngT3" />
@@ -234,5 +286,15 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="52dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tvIdAlumno"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
