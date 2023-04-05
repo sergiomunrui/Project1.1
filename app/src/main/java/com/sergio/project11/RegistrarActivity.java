@@ -63,7 +63,7 @@ public class RegistrarActivity extends AppCompatActivity {
                 for (int asignatura = 1; asignatura <= 5; asignatura++) {
                     for (int trimestre = 1; trimestre <= 3; trimestre++) {
                         String query = "INSERT INTO nota (alumno_id, asignatura_id, trimestre, nota) VALUES (?, ?, ?, ?)";
-                        db.execSQL(query, new Object[]{newRowId, asignatura, trimestre, null});
+                        db.execSQL(query, new Object[]{newRowId, asignatura, trimestre, 0.0});
                     }
                 }
                 Toast.makeText(this, "Alumno registrado correctamente", Toast.LENGTH_SHORT).show();

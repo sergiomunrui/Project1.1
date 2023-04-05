@@ -89,20 +89,28 @@ public class RegistrarNotasActivity extends AppCompatActivity {
             asignaturaSeleccionada=5;
         }
 
-        if (idAlumno!= 0 && nota!= 0 && asignaturaSeleccionada != 0 && trimestreSeleccionado != 0) {
+        if (idAlumno!= 0 && nota != 0 && asignaturaSeleccionada != 0 && trimestreSeleccionado != 0) {
             DatabaseHelper dbHelper = new DatabaseHelper(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+            //Comprobamos si el usuario ya existe. True: no entra en el condicional, False: entra en el condicional y sale de la ejecución del método
+            if (!isUserInDatabase(idAlumno)) {
+                Toast.makeText(this, "El usuario no existe en la base de datos", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
             // Consulta para verificar si ya existe una nota para el alumno, asignatura y trimestre seleccionados
             String checkQuery = "SELECT * FROM nota WHERE alumno_id = ? AND asignatura_id = ? AND trimestre = ?";
             Cursor cursor = db.rawQuery(checkQuery, new String[]{String.valueOf(idAlumno), String.valueOf(asignaturaSeleccionada), String.valueOf(trimestreSeleccionado)});
 
-            if (cursor.moveToFirst()) {
+            //Si hay registro y la nota es distinta de cero
+            if (cursor.moveToFirst() && cursor.getDouble(3) != 0.0) {
                 // Si hay resultado, muestra el mensaje de error
                 Toast.makeText(this, "Error: nota para el alumno registrada anteriormente", Toast.LENGTH_LONG).show();
             } else {
+                //Si hay registro y la nota es cero, permite introducir la nota
                 // Aquí realizamos la consulta SQL para insertar registro en la tabla nota
-                String query = "INSERT INTO nota (alumno_id, asignatura_id, trimestre, nota) VALUES (?, ?, ?, ?)";
+                String query = "INSERT OR REPLACE INTO nota (alumno_id, asignatura_id, trimestre, nota) VALUES (?, ?, ?, ?)";
                 db.execSQL(query, new Object[]{idAlumno, asignaturaSeleccionada, trimestreSeleccionado, nota});
                 Toast.makeText(this, "Nota registrada correctamente", Toast.LENGTH_SHORT).show();
 
@@ -114,6 +122,19 @@ public class RegistrarNotasActivity extends AppCompatActivity {
             Toast.makeText(this, "Por favor, rellena todos los campos de forma correcta", Toast.LENGTH_LONG).show();
         }
 
+    }
+
+    //Método para comprobar si existe el usuario introducido
+    private boolean isUserInDatabase (int idAlumno) {
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String consulta = "SELECT * FROM alumno WHERE id_al = ?";
+        Cursor cursor = db.rawQuery(consulta, new String[]{String.valueOf(idAlumno)});
+
+        boolean usuarioExiste = cursor.moveToFirst();
+        cursor.close();
+        db.close();
+        return usuarioExiste;
     }
 
     //Método para pasar a MainActivity

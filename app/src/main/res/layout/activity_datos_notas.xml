@@ -6,4 +6,233 @@
     android:layout_height="match_parent"
     tools:context=".DatosNotasActivity">
 
+    <TextView
+        android:id="@+id/tvIdAlumno"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMatT1"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
+
+    <TextView
+        android:id="@+id/tvMatT2"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="70dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvMatT1"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
+
+    <TextView
+        android:id="@+id/tvMatT3"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="70dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvMatT2"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
+
+    <TextView
+        android:id="@+id/tvLengT1"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatT1" />
+
+    <TextView
+        android:id="@+id/tvLengT2"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvLengT1"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatT2" />
+
+    <TextView
+        android:id="@+id/tvLengT3"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvLengT2"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatT3" />
+
+    <TextView
+        android:id="@+id/tvBioT1"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/tvLengT1" />
+
+    <TextView
+        android:id="@+id/tvBioT2"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvBioT1"
+        app:layout_constraintTop_toBottomOf="@+id/tvLengT2" />
+
+    <TextView
+        android:id="@+id/tvBioT3"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvBioT2"
+        app:layout_constraintTop_toBottomOf="@+id/tvLengT3" />
+
+    <TextView
+        android:id="@+id/tvIngT1"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/tvBioT1" />
+
+    <TextView
+        android:id="@+id/tvIngT2"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvIngT1"
+        app:layout_constraintTop_toBottomOf="@+id/tvBioT2" />
+
+    <TextView
+        android:id="@+id/tvIngT3"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvIngT2"
+        app:layout_constraintTop_toBottomOf="@+id/tvBioT3" />
+
+    <TextView
+        android:id="@+id/tvEfT1"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/tvIngT1" />
+
+    <TextView
+        android:id="@+id/tvEfT2"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvEfT1"
+        app:layout_constraintTop_toBottomOf="@+id/tvIngT2" />
+
+    <TextView
+        android:id="@+id/tvEfT3"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvEfT2"
+        app:layout_constraintTop_toBottomOf="@+id/tvIngT3" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/tvNotasMat"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tvNotasLeng"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tvNotasBio"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tvNotasIng"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tvNotasEF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
 </android.support.constraint.ConstraintLayout>

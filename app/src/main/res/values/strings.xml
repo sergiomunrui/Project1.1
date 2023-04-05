@@ -54,6 +54,11 @@
     <string name="tvTelefono">Teléfono: </string>
     <string name="tvCorreo">Correo: </string>
     <string name="tvCurso">Curso: </string>
-    <string name="tvNotas">Notas: </string>
+    <string name="tvNotas">Notas</string>
+    <string name="tvNotasMat">Matemáticas</string>
+    <string name="tvNotasLeng">Lengua</string>
+    <string name="tvNotasBio">Biología</string>
+    <string name="tvNotasIng">Inglés</string>
+    <string name="tvNotasEF">E.F.</string>
 
 </resources>

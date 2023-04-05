@@ -69,6 +69,8 @@ public class DatosAlumnoActivity extends AppCompatActivity {
         }
     }
 
+
+
     //Método para pasar a MainActivity
     public void Menu(View view){
         Intent i = new Intent(this, MainActivity.class);
@@ -77,7 +79,9 @@ public class DatosAlumnoActivity extends AppCompatActivity {
 
     //Método para pasar a DatosNotasActivity
     public void DatosNotas(View view){
-        Intent i = new Intent(this, DatosNotasActivity.class);
-        startActivity(i);
+        String idAlumno=etID.getText().toString();
+        Intent intent = new Intent(DatosAlumnoActivity.this, DatosNotasActivity.class);
+        intent.putExtra("idAlumno", idAlumno); // Se agrega el ID del alumno como un extra del Intent
+        startActivity(intent);
     }
 }
