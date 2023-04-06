@@ -4,28 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1DB7AE"
     tools:context=".DatosAlumnoActivity">
-
-    <ImageView
-        android:id="@+id/btnConsultarAlumnoMenu"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="36dp"
-        android:onClick="Menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/home_icon" />
 
     <EditText
         android:id="@+id/etConsultarID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="172dp"
+        android:layout_height="47dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="@string/etRegistrarID"
         android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,10 +27,13 @@
         android:layout_width="335dp"
         android:layout_height="47dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="@string/etRegistrarNombre"
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConsultarID" />
 
@@ -46,77 +42,131 @@
         android:layout_width="335dp"
         android:layout_height="47dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="@string/etRegistrarApellidos"
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConsultarNombre" />
 
-    <Button
+    <ImageView
         android:id="@+id/btnConsultarDatos"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="20dp"
-        android:onClick="ConsultarDatos"
-        android:text="@string/tvConsultar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etConsultarApellidos" />
-
-    <TextView
-        android:id="@+id/tvConsultarTelefono"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="76dp"
         android:layout_marginTop="24dp"
-        android:text="@string/tvTelefono"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvConsultarGrupo" />
+        android:onClick="ConsultarDatos"
+        app:layout_constraintStart_toEndOf="@+id/etConsultarID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lupa_icon" />
 
-    <TextView
-        android:id="@+id/tvConsultarCorreo"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="25dp"
-        android:text="@string/tvCorreo"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvConsultarTelefono" />
-
-    <TextView
-        android:id="@+id/tvConsultarGrupo"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="42dp"
-        android:text="@string/tvCurso"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnConsultarDatos" />
-
-    <TextView
-        android:id="@+id/tvNotas"
-        android:layout_width="60dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="115dp"
-        android:text="@string/tvNotas"
-        android:textSize="18sp"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="380dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnConsultarDatos" />
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="375dp"
+            android:layout_height="225dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bottom_background_light_green" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView10"
+            app:srcCompat="@drawable/btn_circulo" />
+
+        <TextView
+            android:id="@+id/tvNotas"
+            android:layout_width="59dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/tvNotas"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvConsultarGrupo"
+            app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+        <TextView
+            android:id="@+id/tvConsultarTelefono"
+            android:layout_width="268dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/tvTelefono"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvConsultarGrupo" />
+
+        <TextView
+            android:id="@+id/tvConsultarGrupo"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/tvCurso"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvConsultarCorreo"
+            android:layout_width="326dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/tvCorreo"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvConsultarTelefono" />
+
+        <ImageView
+            android:id="@+id/btnDatosNotas"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="DatosNotas"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintEnd_toEndOf="@id/imageView11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/imageView11"
+            app:layout_constraintTop_toTopOf="@+id/imageView11"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@mipmap/mark_icon" />
+
+    </android.support.constraint.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/btnDatosNotas"
+        android:id="@+id/imageView12"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="52dp"
-        android:onClick="DatosNotas"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="36dp"
+        android:onClick="Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnConsultarDatos"
-        app:srcCompat="@mipmap/mark_icon" />
+        app:srcCompat="@drawable/house_icon" />
 
 </android.support.constraint.ConstraintLayout>
