@@ -63,5 +63,7 @@
     <string name="tvCabecera1">1T</string>
     <string name="tvCabecera2">2T</string>
     <string name="tvCabecera3">3T</string>
+    <string name="btnBuscar">Buscar</string>
+    <string name="tvGrupo">Grupo</string>
 
 </resources>

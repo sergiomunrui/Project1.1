@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1DB7AE"
+    tools:context=".GrupoAlumnosActivity">
+
+    <Button
+        android:id="@+id/btnConsultarGrupo"
+        android:layout_width="106dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/boton2"
+        android:onClick="consultarAlumnos"
+        android:text="@string/btnBuscar"
+        android:textColor="@drawable/txt_boton2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/spGrupo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lvConsultarGrupo"
+        android:layout_width="365dp"
+        android:layout_height="546dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGrupo" />
+
+    <TextView
+        android:id="@+id/tvGrupo"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/tvGrupo"
+        android:textColor="#FEDD06"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spGrupo" />
+
+    <Spinner
+        android:id="@+id/spGrupo"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

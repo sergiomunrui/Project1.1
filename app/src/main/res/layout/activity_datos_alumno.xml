@@ -19,6 +19,8 @@
         android:inputType="number"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,6 +36,8 @@
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConsultarID" />
 
@@ -49,6 +53,8 @@
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConsultarNombre" />
 
@@ -102,7 +108,8 @@
             android:layout_marginTop="40dp"
             android:text="@string/tvNotas"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/tvConsultarGrupo"
             app:layout_constraintTop_toTopOf="@+id/imageView10" />
 
@@ -115,7 +122,8 @@
             android:text="@string/tvTelefono"
             android:textAlignment="textStart"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvConsultarGrupo" />
 
@@ -127,7 +135,8 @@
             android:layout_marginTop="36dp"
             android:text="@string/tvCurso"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -139,7 +148,8 @@
             android:layout_marginTop="36dp"
             android:text="@string/tvCorreo"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvConsultarTelefono" />
 

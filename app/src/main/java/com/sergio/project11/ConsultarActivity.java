@@ -19,4 +19,10 @@ public class ConsultarActivity extends AppCompatActivity {
         Intent i = new Intent(this, DatosAlumnoActivity.class);
         startActivity(i);
     }
+
+    //Método para pasar a GrupoAlumnosActivity
+    public void GrupoAlumnos(View view){
+        Intent i = new Intent(this, GrupoAlumnosActivity.class);
+        startActivity(i);
+    }
 }

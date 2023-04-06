@@ -28,7 +28,7 @@ public class RegistrarActivity extends AppCompatActivity {
         etRegistrarTelefono=findViewById(R.id.etRegistrarTelefono);
         etRegistrarCorreo=findViewById(R.id.etRegistrarCorreo);
 
-        spCurso = findViewById(R.id.spTrimestre);
+        spCurso = findViewById(R.id.spCurso);
 
         adapter = ArrayAdapter.createFromResource(
                 this, R.array.spinner_items, R.layout.spinner_item);

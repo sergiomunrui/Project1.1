@@ -27,7 +27,7 @@ public class RegistrarNotasActivity extends AppCompatActivity {
         etNota=findViewById(R.id.etNota);
 
         spAsignatura = findViewById(R.id.spAsignatura);
-        spTrimestre = findViewById(R.id.spTrimestre);
+        spTrimestre = findViewById(R.id.spCurso);
 
 
         adapterAsignatura = ArrayAdapter.createFromResource(

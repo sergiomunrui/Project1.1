@@ -28,6 +28,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("insert into asignatura (id_asig, nombre_asig) values (4, 'Inglés')");
         db.execSQL("insert into asignatura (id_asig, nombre_asig) values (5, 'Educación Física')");
 
+        //Inserción de alumnos de prueba para comprobar el funcionamiento de la aplicación
+
     }
 
     @Override
