@@ -8,7 +8,8 @@ import android.widget.TextView;
 
 public class DatosNotasActivity extends AppCompatActivity {
 
-    private TextView tvIdAlumno, tvMat1, tvMat2, tvMat3, tvLeng1, tvLeng2, tvLeng3, tvBio1, tvBio2, tvBio3, tvIng1, tvIng2, tvIng3, tvEf1, tvEf2, tvEf3;
+    private TextView tvIdAlumno, tvMat1, tvMat2, tvMat3, tvLeng1, tvLeng2, tvLeng3, tvBio1, tvBio2,
+            tvBio3, tvIng1, tvIng2, tvIng3, tvEf1, tvEf2, tvEf3, tvNombre;
 
 
 
@@ -33,10 +34,13 @@ public class DatosNotasActivity extends AppCompatActivity {
         tvEf1 = findViewById(R.id.tvEfT1);
         tvEf2 = findViewById(R.id.tvEfT2);
         tvEf3 = findViewById(R.id.tvEfT3);
+        tvNombre = findViewById(R.id.tvNombre);
 
-        // Recuperar el ID del alumno desde la actividad DatosAlumnoActivity
+        // Recuperar el ID del alumno y su nombre desde la actividad DatosAlumnoActivity
         String idAlumno = getIntent().getStringExtra("idAlumno");
+        String nombreAlumno = getIntent().getStringExtra("nombreAlumno");
         tvIdAlumno.setText(idAlumno);
+        tvNombre.setText(nombreAlumno);
 
         int idAlumnoInt = Integer.parseInt(idAlumno);
 
@@ -74,9 +78,6 @@ public class DatosNotasActivity extends AppCompatActivity {
         tvEf1.setText(String.valueOf(notaEfT1.getNota()));
         tvEf2.setText(String.valueOf(notaEfT2.getNota()));
         tvEf3.setText(String.valueOf(notaEfT3.getNota()));
-
-
-
 
     }
 

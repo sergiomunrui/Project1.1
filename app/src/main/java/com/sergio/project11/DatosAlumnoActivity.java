@@ -80,8 +80,10 @@ public class DatosAlumnoActivity extends AppCompatActivity {
     //Método para pasar a DatosNotasActivity
     public void DatosNotas(View view){
         String idAlumno=etID.getText().toString();
+        String nombreAlumno=etNombre.getText().toString() + " " + etApellidos.getText().toString();
         Intent intent = new Intent(DatosAlumnoActivity.this, DatosNotasActivity.class);
         intent.putExtra("idAlumno", idAlumno); // Se agrega el ID del alumno como un extra del Intent
+        intent.putExtra("nombreAlumno", nombreAlumno); //Se agrega el nombre y apellidos del alumno como un extra del Intent
         startActivity(intent);
     }
 }

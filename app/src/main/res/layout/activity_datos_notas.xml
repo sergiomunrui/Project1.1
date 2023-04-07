@@ -4,297 +4,405 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1DB7AE"
     android:textAlignment="center"
     tools:context=".DatosNotasActivity">
+
+    <ImageView
+        android:id="@+id/bgNombre"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toEndOf="@+id/bgId"
+        app:layout_constraintTop_toBottomOf="@+id/tvPantallaNotas"
+        app:srcCompat="@drawable/bottom_background_light_green" />
+
+    <ImageView
+        android:id="@+id/bgId"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPantallaNotas"
+        app:srcCompat="@drawable/bottom_background_light_green" />
 
     <TextView
         android:id="@+id/tvIdAlumno"
         android:layout_width="60dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="52dp"
+        android:layout_height="25dp"
+        android:textAlignment="center"
+        android:textColor="#404040"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bgId"
+        app:layout_constraintEnd_toEndOf="@+id/bgId"
+        app:layout_constraintStart_toStartOf="@+id/bgId"
+        app:layout_constraintTop_toTopOf="@+id/bgId" />
+
+    <TextView
+        android:id="@+id/tvPantallaNotas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/tvPantallaNota"
+        android:textAlignment="center"
+        android:textColor="#FEDD06"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvMatT1"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="70dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
-
-    <TextView
-        android:id="@+id/tvMatT"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/tvCabecera1"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
-
-    <TextView
-        android:id="@+id/tvMatT4"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/tvCabecera2"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvMatT"
-        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
-
-    <TextView
-        android:id="@+id/tvMatT5"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/tvCabecera3"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvMatT4"
-        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
-
-    <TextView
-        android:id="@+id/tvMatT2"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="70dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvMatT1"
-        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
-
-    <TextView
-        android:id="@+id/tvMatT3"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="70dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvMatT2"
-        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
-
-    <TextView
-        android:id="@+id/tvLengT1"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/tvMatT1" />
-
-    <TextView
-        android:id="@+id/tvLengT2"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvLengT1"
-        app:layout_constraintTop_toBottomOf="@+id/tvMatT2" />
-
-    <TextView
-        android:id="@+id/tvLengT3"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvLengT2"
-        app:layout_constraintTop_toBottomOf="@+id/tvMatT3" />
-
-    <TextView
-        android:id="@+id/tvBioT1"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/tvLengT1" />
-
-    <TextView
-        android:id="@+id/tvBioT2"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvBioT1"
-        app:layout_constraintTop_toBottomOf="@+id/tvLengT2" />
-
-    <TextView
-        android:id="@+id/tvBioT3"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvBioT2"
-        app:layout_constraintTop_toBottomOf="@+id/tvLengT3" />
-
-    <TextView
-        android:id="@+id/tvIngT1"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/tvBioT1" />
-
-    <TextView
-        android:id="@+id/tvIngT2"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvIngT1"
-        app:layout_constraintTop_toBottomOf="@+id/tvBioT2" />
-
-    <TextView
-        android:id="@+id/tvIngT3"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvIngT2"
-        app:layout_constraintTop_toBottomOf="@+id/tvBioT3" />
-
-    <TextView
-        android:id="@+id/tvEfT1"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/tvIngT1" />
-
-    <TextView
-        android:id="@+id/tvEfT2"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvEfT1"
-        app:layout_constraintTop_toBottomOf="@+id/tvIngT2" />
-
-    <TextView
-        android:id="@+id/tvEfT3"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvEfT2"
-        app:layout_constraintTop_toBottomOf="@+id/tvIngT3" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="70dp"
-        android:text="@string/tvNotasMat"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvIdAlumno" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/tvNotasLeng"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/tvNotasBio"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/tvNotasIng"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/tvNotasEF"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
         android:id="@+id/tvNombre"
         android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="52dp"
+        android:layout_height="25dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/tvIdAlumno"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAlignment="center"
+        android:textColor="#404040"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bgNombre"
+        app:layout_constraintEnd_toEndOf="@+id/bgNombre"
+        app:layout_constraintStart_toStartOf="@+id/bgNombre"
+        app:layout_constraintTop_toTopOf="@+id/bgNombre" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="346dp"
+        android:background="#E5FCFB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45">
+
+        <TextView
+            android:id="@+id/tvEfT2"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvEfT1"
+            app:layout_constraintTop_toBottomOf="@+id/tvIngT2" />
+
+        <TextView
+            android:id="@+id/tvMatT3"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvMatT2"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+        <TextView
+            android:id="@+id/tvEfT1"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/tvIngT1" />
+
+        <TextView
+            android:id="@+id/tvEfT3"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvEfT2"
+            app:layout_constraintTop_toBottomOf="@+id/tvIngT3" />
+
+        <TextView
+            android:id="@+id/tvMatT2"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvMatT1"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+        <TextView
+            android:id="@+id/tvBioT3"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvBioT2"
+            app:layout_constraintTop_toBottomOf="@+id/tvLengT3" />
+
+        <TextView
+            android:id="@+id/tvLengT3"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvLengT2"
+            app:layout_constraintTop_toBottomOf="@+id/tvMatT3" />
+
+        <TextView
+            android:id="@+id/tvBioT2"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvBioT1"
+            app:layout_constraintTop_toBottomOf="@+id/tvLengT2" />
+
+        <TextView
+            android:id="@+id/tvMatT1"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+        <TextView
+            android:id="@+id/tvLengT1"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/tvMatT1" />
+
+        <TextView
+            android:id="@+id/tvLengT2"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvLengT1"
+            app:layout_constraintTop_toBottomOf="@+id/tvMatT2" />
+
+        <TextView
+            android:id="@+id/tvIngT3"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvIngT2"
+            app:layout_constraintTop_toBottomOf="@+id/tvBioT3" />
+
+        <TextView
+            android:id="@+id/tvBioT1"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/tvLengT1" />
+
+        <TextView
+            android:id="@+id/tvIngT1"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/tvBioT1" />
+
+        <TextView
+            android:id="@+id/tvIngT2"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#404040"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/tvIngT1"
+            app:layout_constraintTop_toBottomOf="@+id/tvBioT2" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="287dp"
+            android:layout_height="33dp"
+            android:background="#318A86"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvMatT5"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/tvCabecera3"
+                android:textAlignment="center"
+                android:textColor="#FEDD06"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tvMatT4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMatT4"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/tvCabecera2"
+                android:textAlignment="center"
+                android:textColor="#FEDD06"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tvMatT"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMatT"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/tvCabecera1"
+                android:textAlignment="center"
+                android:textColor="#FEDD06"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:background="#318A86"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/tvNotasMat"
+                android:textColor="#FEDD06"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/tvNotasLeng"
+                android:textColor="#FEDD06"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/tvNotasBio"
+                android:textColor="#FEDD06"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/tvNotasIng"
+                android:textColor="#FEDD06"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/tvNotasEF"
+                android:textColor="#FEDD06"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
