@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Project1.1</string>
+    <string name="app_name">Colegio San Rafael</string>
     <string name="btnMenuRegistrar">Registrar</string>
     <string name="btnMenuConsultar">Consultar</string>
     <string name="btnMenuModificar">Modificar</string>
