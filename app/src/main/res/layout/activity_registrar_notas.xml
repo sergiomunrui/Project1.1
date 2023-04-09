@@ -17,6 +17,7 @@
         android:ems="10"
         android:hint="@string/etRegistrarID"
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -53,6 +54,7 @@
         android:ems="10"
         android:hint="@string/etNota"
         android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -68,7 +70,7 @@
         android:onClick="Menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/home_icon" />
+        app:srcCompat="@drawable/house_icon_w" />
 
     <Button
         android:id="@+id/btnRegistrarNota"

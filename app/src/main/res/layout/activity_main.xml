@@ -148,7 +148,7 @@
             app:layout_constraintEnd_toEndOf="@+id/btnMenuConsultar"
             app:layout_constraintStart_toStartOf="@+id/btnMenuConsultar"
             app:layout_constraintTop_toTopOf="@+id/btnMenuConsultar"
-            app:srcCompat="@drawable/lupa_icon" />
+            app:srcCompat="@drawable/lupa_icon_w" />
 
         <TextView
             android:id="@+id/textView"
@@ -173,7 +173,7 @@
             app:layout_constraintEnd_toEndOf="@+id/btnMenuRegistrar"
             app:layout_constraintStart_toStartOf="@+id/btnMenuRegistrar"
             app:layout_constraintTop_toTopOf="@+id/btnMenuRegistrar"
-            app:srcCompat="@drawable/register1_icon" />
+            app:srcCompat="@drawable/register1_icon_w" />
 
         <ImageView
             android:id="@+id/imageView7"
@@ -183,7 +183,7 @@
             app:layout_constraintEnd_toEndOf="@+id/btnMenuModificar"
             app:layout_constraintStart_toStartOf="@+id/btnMenuModificar"
             app:layout_constraintTop_toTopOf="@+id/btnMenuModificar"
-            app:srcCompat="@drawable/actualizar_icon" />
+            app:srcCompat="@drawable/actualizar_icon_w" />
 
         <ImageView
             android:id="@+id/imageView13"
@@ -193,7 +193,7 @@
             app:layout_constraintEnd_toEndOf="@+id/btnMenuEliminar"
             app:layout_constraintStart_toStartOf="@+id/btnMenuEliminar"
             app:layout_constraintTop_toTopOf="@+id/btnMenuEliminar"
-            app:srcCompat="@drawable/eliminar_icon" />
+            app:srcCompat="@drawable/eliminar_icon_w" />
     </android.support.constraint.ConstraintLayout>
 
 

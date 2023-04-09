@@ -1,5 +1,6 @@
 package com.sergio.project11;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -79,6 +80,12 @@ public class DatosNotasActivity extends AppCompatActivity {
         tvEf2.setText(String.valueOf(notaEfT2.getNota()));
         tvEf3.setText(String.valueOf(notaEfT3.getNota()));
 
+    }
+
+    //Método para pasar a MainActivity
+    public void Menu(View view){
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 
 }

@@ -123,7 +123,7 @@
             app:layout_constraintEnd_toEndOf="@+id/btnConsultarAlumno"
             app:layout_constraintStart_toStartOf="@+id/btnConsultarAlumno"
             app:layout_constraintTop_toTopOf="@+id/btnConsultarAlumno"
-            app:srcCompat="@drawable/alumno_icon" />
+            app:srcCompat="@drawable/alumno_icon_w" />
 
         <ImageView
             android:id="@+id/imageView9"
@@ -133,7 +133,7 @@
             app:layout_constraintEnd_toEndOf="@+id/btnConsultarCurso"
             app:layout_constraintStart_toStartOf="@+id/btnConsultarCurso"
             app:layout_constraintTop_toTopOf="@+id/btnConsultarCurso"
-            app:srcCompat="@drawable/students_icon" />
+            app:srcCompat="@drawable/students_icon_w" />
 
     </android.support.constraint.ConstraintLayout>
 
