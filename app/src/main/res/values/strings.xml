@@ -66,5 +66,7 @@
     <string name="btnBuscar">Buscar</string>
     <string name="tvGrupo">Grupo</string>
     <string name="tvPantallaNota">Notas</string>
+    <string name="btnModificar">Modificar</string>
+    <string name="tvModificarDatos">Modificar Datos</string>
 
 </resources>

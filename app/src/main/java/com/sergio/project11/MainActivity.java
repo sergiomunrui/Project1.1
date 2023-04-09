@@ -38,4 +38,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, ConsultarActivity.class);
         startActivity(i);
     }
+
+    //Método para pasar a ModificarActivity
+    public void Modificar(View view){
+        Intent i = new Intent(this, ModificarActivity.class);
+        startActivity(i);
+    }
 }
