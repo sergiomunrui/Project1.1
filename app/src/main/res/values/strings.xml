@@ -68,5 +68,8 @@
     <string name="tvPantallaNota">Notas</string>
     <string name="btnModificar">Modificar</string>
     <string name="tvModificarDatos">Modificar Datos</string>
+    <string name="tvSplash1">Colegio</string>
+    <string name="tvSplash2">San Rafael</string>
+
 
 </resources>
