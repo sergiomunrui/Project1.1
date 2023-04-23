@@ -3,5 +3,4 @@
     android:color="#E5FCFB">
 
     <item android:drawable="@drawable/bg_ripple"/>
-
 </ripple>

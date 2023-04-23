@@ -58,7 +58,8 @@ public class EliminarActivity extends AppCompatActivity {
 
                         db.close();
 
-                        Toast.makeText(EliminarActivity.this, "Alumno y sus notas eliminados correctamente", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EliminarActivity.this, "Alumno y sus notas eliminados" +
+                                " correctamente", Toast.LENGTH_SHORT).show();
                     }
                 });
 

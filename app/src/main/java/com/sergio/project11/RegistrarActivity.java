@@ -70,15 +70,12 @@ public class RegistrarActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Error al registrar el alumno", Toast.LENGTH_SHORT).show();
             }
-
             db.close();
             limpiar();
-
             Toast.makeText(this, "Alumno registrado correctamente", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Por favor, rellena todos los campos", Toast.LENGTH_SHORT).show();
         }
-
     }
 
     private void limpiar() {

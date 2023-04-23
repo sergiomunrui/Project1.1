@@ -41,7 +41,8 @@ public class DatosAlumnoActivity extends AppCompatActivity {
             SQLiteDatabase db = dbHelper.getReadableDatabase();
 
             //Consulta que busca o por el id o por nombre y apellidos, Ejecuta y guarda los resultados
-            String consultaAlumno = "SELECT id_al, nombre_al, apellidos_al, telefono_al, correo_al, grupo FROM alumno WHERE id_al = ? OR (nombre_al = ? AND apellidos_al = ?)";
+            String consultaAlumno = "SELECT id_al, nombre_al, apellidos_al, telefono_al, correo_al," +
+                    " grupo FROM alumno WHERE id_al = ? OR (nombre_al = ? AND apellidos_al = ?)";
             Cursor cursor = db.rawQuery(consultaAlumno, new String[]{codigoAlum, nombreAlum, apellidosAlum});
 
             //Si obtenemos resultado y existe el registro, extraemos datos y los mostramos en pantalla
@@ -61,15 +62,16 @@ public class DatosAlumnoActivity extends AppCompatActivity {
                 tvGrupo.setText("Grupo: "+grupoAlumno);
             } else {
                 //Si no obtenemos registro, lanzamos Toast
-                Toast.makeText(DatosAlumnoActivity.this, "Alumno no encontrado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(
+                        DatosAlumnoActivity.this, "Alumno no encontrado", Toast.LENGTH_SHORT
+                ).show();
             }
         } else {
             //Si no se ha insertado el ID o el nombre y apellido, lanzamos Toast
-            Toast.makeText(DatosAlumnoActivity.this, "Por favor, introduce el ID o el nombre y apellidos del alumno", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DatosAlumnoActivity.this, "Por favor, introduce el ID o el" +
+                    " nombre y apellidos del alumno", Toast.LENGTH_SHORT).show();
         }
     }
-
-
 
     //Método para pasar a MainActivity
     public void Menu(View view){

@@ -70,6 +70,8 @@
     <string name="tvModificarDatos">Modificar Datos</string>
     <string name="tvSplash1">Colegio</string>
     <string name="tvSplash2">San Rafael</string>
-
+    <string name="tvDatos">Datos Alumno</string>
+    <string name="tvModNotas">Notas Alumno</string>
+    <string name="btnModNotas">Modificar Nota</string>
 
 </resources>

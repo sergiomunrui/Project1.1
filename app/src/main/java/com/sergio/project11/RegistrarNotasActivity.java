@@ -101,7 +101,8 @@ public class RegistrarNotasActivity extends AppCompatActivity {
 
             // Consulta para verificar si ya existe una nota para el alumno, asignatura y trimestre seleccionados
             String checkQuery = "SELECT * FROM nota WHERE alumno_id = ? AND asignatura_id = ? AND trimestre = ?";
-            Cursor cursor = db.rawQuery(checkQuery, new String[]{String.valueOf(idAlumno), String.valueOf(asignaturaSeleccionada), String.valueOf(trimestreSeleccionado)});
+            Cursor cursor = db.rawQuery(checkQuery, new String[]{String.valueOf(idAlumno),
+                    String.valueOf(asignaturaSeleccionada), String.valueOf(trimestreSeleccionado)});
 
             //Si hay registro y la nota es distinta de cero
             if (cursor.moveToFirst() && cursor.getDouble(3) != 0.0) {

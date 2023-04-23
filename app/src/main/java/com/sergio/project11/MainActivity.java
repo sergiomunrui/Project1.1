@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Método para pasar a ModificarActivity
     public void Modificar(View view){
-        Intent i = new Intent(this, ModificarActivity.class);
+        Intent i = new Intent(this, ModificarMenuActivity.class);
         startActivity(i);
     }
 }

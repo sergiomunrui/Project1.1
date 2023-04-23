@@ -17,11 +17,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         //Creación de las tabla de datos al iniciar el programa
-        db.execSQL("create table alumno (id_al integer primary key, nombre_al text not null, apellidos_al text not null, telefono_al text, correo_al text, grupo text not null)");
+        db.execSQL("create table alumno (id_al integer primary key, nombre_al text not null, apellidos_al text not null," +
+                " telefono_al text, correo_al text, grupo text not null)");
         db.execSQL("create table asignatura (id_asig integer primary key, nombre_asig text)");
-        db.execSQL("create table profesor (id_prof integer primary key, dni text not null, nombre_prof text not null, apellidos_prof text not null, correo_prof text not null, telefono_prof text not null)");
-        db.execSQL("create table nota (alumno_id integer not null, asignatura_id integer not null, trimestre integer not null, nota real default 0.0, foreign key (alumno_id) references alumno(id_al), foreign key (asignatura_id) references asignatura(id_asig), primary key (alumno_id, asignatura_id, trimestre))");
-        db.execSQL("create table profesor_asignatura (profesor_id integer, asignatura_id integer, foreign key (profesor_id) references profesor(id_prof), foreign key (asignatura_id) references asignatura(id_asig), primary key (profesor_id, asignatura_id))");
+        db.execSQL("create table nota (alumno_id integer not null, asignatura_id integer not null, trimestre integer not null," +
+                " nota real default 0.0, foreign key (alumno_id) references alumno(id_al)," +
+                " foreign key (asignatura_id) references asignatura(id_asig), primary key (alumno_id, asignatura_id, trimestre))");
         db.execSQL("insert into asignatura (id_asig, nombre_asig) values (1, 'Matemáticas')");
         db.execSQL("insert into asignatura (id_asig, nombre_asig) values (2, 'Lengua')");
         db.execSQL("insert into asignatura (id_asig, nombre_asig) values (3, 'Biología')");
@@ -29,8 +30,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("insert into asignatura (id_asig, nombre_asig) values (5, 'Educación Física')");
 
         //Inserción de alumnos de prueba para comprobar el funcionamiento de la aplicación
-        db.execSQL("insert into alumno (id_al, nombre_al, apellidos_al, telefono_al, correo_al, grupo) values (30, 'Carla', 'León López', '678129322', 'carlaleon@cogsr.es', '1A')"); //id1
-        db.execSQL("insert into alumno (id_al, nombre_al, apellidos_al, telefono_al, correo_al, grupo) values (31, 'Juan Carlos', 'Pastor Puig', '677485328', 'juancarlospastor@cogsr.es', '1A')"); //id2
+        db.execSQL("insert into alumno (nombre_al, apellidos_al, telefono_al, correo_al, grupo) values ('Carla', 'León López', '678129322', 'carlaleon@cogsr.es', '1A')"); //id1
+        db.execSQL("insert into alumno (nombre_al, apellidos_al, telefono_al, correo_al, grupo) values ('Juan Carlos', 'Pastor Puig', '677485328', 'juancarlospastor@cogsr.es', '1A')"); //id2
         db.execSQL("insert into alumno (nombre_al, apellidos_al, telefono_al, correo_al, grupo) values ('Manuela', 'Cortés de la Fuente', '689471335', 'manuelacortes@cogsr.es', '1A')"); //id3
         db.execSQL("insert into alumno (nombre_al, apellidos_al, telefono_al, correo_al, grupo) values ('Verónica', 'Hernández Pérez', '698471124', 'veronicahernandez@cogsr.es', '1B')"); //id4
         db.execSQL("insert into alumno (nombre_al, apellidos_al, telefono_al, correo_al, grupo) values ('Valeria', 'Márquez Morón', '689741255', 'valeriamarquez@cogsr.es', '1B')"); //id5
@@ -50,7 +51,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("insert into alumno (nombre_al, apellidos_al, telefono_al, correo_al, grupo) values ('Rosa María', 'García', '632584636', 'rosamariagarcia@cogsr.es', '3A')"); //id19
         db.execSQL("insert into alumno (nombre_al, apellidos_al, telefono_al, correo_al, grupo) values ('Guillermo', 'Muñoz Gómez', '658977452', 'guillermomuñoz@cogsr.es', '3A')"); //id20
         db.execSQL("insert into alumno (nombre_al, apellidos_al, telefono_al, correo_al, grupo) values ('Beatriz', 'Pacual Garrido', '689452122', 'beatrizpacual@cogsr.es', '3A')"); //id21
-
     }
 
     @Override
