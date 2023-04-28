@@ -1,5 +1,7 @@
 package com.sergio.project11;
 
+import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,19 +45,31 @@ public class ModificarActivity extends AppCompatActivity {
         String correo = etCorreo.getText().toString().trim();
         String grupo = spCurso.getSelectedItem().toString();
 
-        if (!id.isEmpty() && !nombre.isEmpty() && !apellidos.isEmpty() && !telefono.isEmpty() && !correo.isEmpty() && !grupo.isEmpty()) {
-            DatabaseHelper dbHelper = new DatabaseHelper(this);
-            SQLiteDatabase db = dbHelper.getWritableDatabase();
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-            // Aquí necesitarías realizar la consulta SQL adecuada según tu diseño de base de datos
-            String query = "UPDATE alumno SET nombre_al = ?, apellidos_al = ?, telefono_al = ?, correo_al = ?, grupo = ? WHERE id_al = ?";
-            db.execSQL(query, new Object[]{nombre, apellidos, telefono, correo, grupo, id});
+        if (nombre.isEmpty() || apellidos.isEmpty() || telefono.isEmpty() || correo.isEmpty() || grupo.isEmpty() || id.isEmpty()) {
+            Toast.makeText(ModificarActivity.this, "Por favor, rellena todos los campos", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-            db.close();
+        // Consulta para verificar si el usuario existe
+        String checkQuery = "SELECT * FROM alumno WHERE id_al = ?";
+        Cursor cursor = db.rawQuery(checkQuery, new String[]{String.valueOf(id)});
 
+        // Si el usuario existe, actualizamos la información
+        if (cursor.moveToFirst()) {
+            ContentValues values = new ContentValues();
+            values.put("nombre_al", nombre);
+            values.put("apellidos_al", apellidos);
+            values.put("telefono_al", telefono);
+            values.put("correo_al", correo);
+            values.put("grupo", grupo);
+
+            db.update("alumno", values, "id_al = ?", new String[]{String.valueOf(id)});
             Toast.makeText(this, "Alumno modificado correctamente", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Por favor, rellena todos los campos", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this,"Error:alumno no encontrado",Toast.LENGTH_SHORT).show();
         }
     }
 }

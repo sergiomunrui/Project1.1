@@ -80,6 +80,11 @@ public class ModificarNotasActivity extends AppCompatActivity {
             e.toString();
         }
 
+        if(nota<=0 || nota>10){
+            Toast.makeText(this, "La nota tiene que estar entre 0 y 10", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         //Pasamos de cadena de texto lo seleccionado a int
         if(trimestreSpinner.equals("Primer trimestre")){
             trimestreSeleccionado=1;
