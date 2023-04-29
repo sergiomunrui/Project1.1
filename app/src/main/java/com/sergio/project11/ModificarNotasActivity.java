@@ -121,25 +121,26 @@ public class ModificarNotasActivity extends AppCompatActivity {
             String checkQuery = "SELECT * FROM nota WHERE alumno_id = ? AND asignatura_id = ? AND trimestre = ?";
             Cursor cursor = db.rawQuery(checkQuery, new String[]{String.valueOf(idAlumno), String.valueOf(asignaturaSeleccionada), String.valueOf(trimestreSeleccionado)});
 
-            //Si hay registro y la nota es distinta igual a cero
-            if (cursor.moveToFirst() && cursor.getDouble(3) == 0.0) {
-                cursor.close();
-                db.close();
-                // Si nota registrada con nota inicial
-                Toast.makeText(this, "Error: nota no registrada anteriormente para el alumno", Toast.LENGTH_LONG).show();
-            } else {
-                cursor.close();
-                //Si hay registro y la nota ya se registró (es distinta de 0.0), permite actualizar la nota
-                // Aquí realizamos la consulta SQL para insertar registro en la tabla nota
-                String query = "REPLACE INTO nota (alumno_id, asignatura_id, trimestre, nota) VALUES (?, ?, ?, ?)";
-                db.execSQL(query, new Object[]{idAlumno, asignaturaSeleccionada, trimestreSeleccionado, nota});
-                Toast.makeText(this, "Nota registrada correctamente", Toast.LENGTH_SHORT).show();
+            // Si hay registro
+            if (cursor.moveToFirst()) {
+                // Si la nota es igual a cero
+                if (cursor.getDouble(3) == 0.0) {
+                    cursor.close();
+                    db.close();
+                    // Si nota registrada con nota inicial
+                    Toast.makeText(this, "Error: nota no registrada anteriormente para el alumno", Toast.LENGTH_LONG).show();
+                } else {
+                    cursor.close();
+                    // Si la nota ya se registró (es distinta de 0.0), permite actualizar la nota
+                    // Aquí realizamos la consulta SQL para insertar registro en la tabla nota
+                    String query = "REPLACE INTO nota (alumno_id, asignatura_id, trimestre, nota) VALUES (?, ?, ?, ?)";
+                    db.execSQL(query, new Object[]{idAlumno, asignaturaSeleccionada, trimestreSeleccionado, nota});
+                    Toast.makeText(this, "Nota registrada correctamente", Toast.LENGTH_SHORT).show();
 
-                db.close();
+                    db.close();
+                }
             }
 
-        } else {
-            Toast.makeText(this, "Por favor, rellena todos los campos de forma correcta", Toast.LENGTH_LONG).show();
         }
     }
 

@@ -67,7 +67,7 @@
         android:layout_height="60dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="36dp"
-        android:onClick="Menu"
+        android:onClick="ModificarNotas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/house_icon_w" />
